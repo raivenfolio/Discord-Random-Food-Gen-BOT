@@ -11,7 +11,8 @@ TOKEN = os.getenv('DISCORD_TOKEN') # to get mi tokens! so that i dont have to ty
 
 
 
-                                #config the dbot intent like to read the msg kapag nag type ng commands
+#config the dbot intent like to read the msg kapag nag type ng commands
+#so these are like the configs for the bot as well
 msgIntents = discord.Intents.default() 
 msgIntents.message_content = True #so what this does is like when peopel are messaging on discord it will be able to read it
 msgIntents.members = True
@@ -24,7 +25,7 @@ bot = commands.Bot(command_prefix="!", intents=msgIntents)
 #make function
 def query_food_from_osm(place, cuisine):
     # gonna make a var that for the url of query engine ng api 
-    OSM_query_url = "https://overpass-api.de/api/interpreter"
+    OSM_query_url = "https://overpass-api.de/api/interpreter" #this is found sa website mismo ng API but its also in their wiki
 
     headers = {
         'User-Agent': 'FoodRecoBot/1.0 (Contact: mythomight@gmail.com)',
@@ -43,7 +44,7 @@ def query_food_from_osm(place, cuisine):
     put_query = query_temps.replace("{{CITY}}", place.strip())
     put_query = put_query.replace("{{CUISINE}}", cuisine.strip())
 
-    print(f"---- SENDING request to OSM -----")
+    print(f"---- SENDING request to OSM -----") #debugging 101 but now it stays here so i can see if its raeading the rest of the lines
 
     try:
         # this will be sent sa OSM server
@@ -66,7 +67,7 @@ def query_food_from_osm(place, cuisine):
     except Exception as e:
         print(f"error during request: {e}")
         return []
-
+#this is when you run the py and will output the following:
 @bot.event
 async def on_ready():
     print(f' Logged in as {bot.user.name}')
@@ -116,6 +117,7 @@ async def find(ctx, city: str, *, food: str):
 #keeps the script running and listenign to commands in disc
 bot.run(TOKEN) 
 
+#my notes:
 
 #async and wait is like the python will do or send a task and wont pause and freeze the bot. the python will pause until its done
 #request get is the bot searching and browsing the web to get from the OSM API
