@@ -5,6 +5,7 @@ This discord bot basically recommends you food store based on what food you want
 it uses an API called OpenStreetMap Overapps API (OSM)
 
 (It isnt a bit accurate sometimes but it does the thing ^^)
+trying my hands on creating discord bots and get familiar.
 
 ## 🚀 How to Setup
 
