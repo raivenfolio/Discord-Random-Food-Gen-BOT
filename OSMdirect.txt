@@ -1,0 +1,6 @@
+[out:json][timeout:25];
+area[name="{{CITY}}"]->.searchArea;
+(
+  nwr["amenity"~"restaurant|fast_food"]["cuisine"~"{{CUISINE}}",i](area.searchArea);
+);
+out center;

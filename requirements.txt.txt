@@ -1,0 +1,10 @@
+If you wanna contribute or add something, here's some steps you need to do first:
+
+1. please make sure to have your own DISCORD TOKEN first that can be found in the discord developer page then create a test bot with your own token
+
+2. Usually the page asks you to reset your token to get a fresh one so use that.
+
+3. Then put the key token on to the key.env file after the equal sign then you can test while you code.
+
+
+--raiven
